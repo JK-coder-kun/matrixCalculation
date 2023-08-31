@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="matrixA-container">
+            <div><input type="number" class="childOfA"data-pos="11"></div>
+            <div><input type="number" class="childOfA"data-pos="12"></div>
+            <div><input type="number" class="childOfA"data-pos="13"></div>
+            <div><input type="number" class="childOfA"data-pos="21"></div>
+            <div><input type="number" class="childOfA"data-pos="22"></div>
+            <div><input type="number" class="childOfA"data-pos="23"></div>
+            <div><input type="number" class="childOfA"data-pos="31"></div>
+            <div><input type="number" class="childOfA"data-pos="32"></div>
+            <div><input type="number" class="childOfA"data-pos="33"></div>
+        </div>
+        <div class="matrixX-container">
+            <div><input type="text"value="x" disabled></div>
+            <div><input type="text"value="y" disabled></div>
+            <div><input type="text"value="z" disabled></div>
+        </div>
+        <div class="equal">=</div>
+        <div class="matrixB-container">
+            <div><input type="number" class="childOfB"data-pos="11"></div>
+            <div><input type="number" class="childOfB"data-pos="21"></div>
+            <div><input type="number" class="childOfB"data-pos="31"></div>
+        </div>
+    </div>
+
+    <button onclick="run()" class="solve">Solve</button>
+    <br>
+    <div class="ans-box">
+        x=<span id="valuex"></span><br>
+        y=<span id="valuey"></span><br>
+        z=<span id="valuez"></span>
+    </div>
+</body>
+</html>

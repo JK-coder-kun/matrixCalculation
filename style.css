@@ -1,0 +1,56 @@
+.matrixA-container{
+    width: 300px;
+    height: 300px;
+    display:inline-grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: cyan;
+    margin-right: 20px;
+}
+.matrixA-container *,.matrixB-container *{
+    border: 1px solid red;
+    display: grid;
+    place-content: center;
+}
+.matrixA-container * input,.matrixB-container * input,.matrixX-container * input{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    box-sizing: content-box;
+    font-size: 20px;
+}
+
+.matrixX-container,.matrixB-container{
+    width: 100px;
+    height: 300px;
+    display: inline-grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: cyan;
+}
+.matrixX-container *{
+    border: 1px solid red;
+    display: grid;
+    place-content: center;
+    font-size: 30px;
+}
+
+.equal{
+    height: 300px;
+    display: inline-grid;
+    place-self: center;
+}
+button.solve{
+    display: block;
+    width: 100px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: white;
+}
+div.ans-box{
+    font-size: 25px;
+    border: 1px solid green;
+    border-radius: 10px;
+    width: 300px;
+    padding: 5px;
+    padding-left: 15px;
+}
