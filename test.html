@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>putting makeup on</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <div class="m-5 p-3">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-borderless align-middle text-center">
+                    <thead></thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="number" class="childOfA" data-pos='11'></td>
+                            <td><input type="number" class="childOfA" data-pos='12'></td>
+                            <td><input type="number" class="childOfA" data-pos='13'></td>
+                            <td class="border-start border-end border-primary">
+                            <!-- <input class="form-control-plaintext text-center" type="text" readonly placeholder="X"> -->
+                            <label for="" class="form-label">X</label>
+                        </td>
+                            <td></td>
+                            <td><input type="number" class="childOfB" data-pos='11'></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="childOfA" data-pos='21'></td>
+                            <td><input type="number" class="childOfA" data-pos='22'></td>
+                            <td><input type="number" class="childOfA" data-pos='23'></td>
+                            <td class="border-start border-end border-primary">
+                                <label for="" class="form-label">Y</label>
+                            </td>
+                            <td>
+                                <label for="" class="form-label">=</label>
+                            </td>
+                            <td><input type="number" class="childOfB" data-pos='21'></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="childOfA" data-pos='31'></td>
+                            <td><input type="number" class="childOfA" data-pos='32'></td>
+                            <td><input type="number" class="childOfA" data-pos='33'></td>
+                            <td class="border-start border-end border-primary">
+                                <label for="" class="form-label">Z</label>
+                            </td>
+                            <td></td>
+                            <td><input type="number" class="childOfB" data-pos='31'></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-5">
+                <button onclick="run()" type='button' class="btn btn-primary">Solve</button>
+            </div>
+            <div class="w-50">
+                <div class="mt-5 w-25">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>X</td>
+                            <td>=</td>
+                            <td><span id="valuex"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Y</td>
+                            <td>=</td>
+                            <td><span id="valuey"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Z</td>
+                            <td>=</td>
+                            <td><span id="valuez"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
