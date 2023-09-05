@@ -12,13 +12,13 @@ const r3=document.getElementById("r3");
 const r4=document.getElementById("r4");
 const r5=document.getElementById("r5");
 
-const diav1=document.querySelectorAll(".v1");
-const diav2=document.querySelectorAll(".v2");
-const diar1=document.querySelectorAll(".r1");
-const diar2=document.querySelectorAll(".r2");
-const diar3=document.querySelectorAll(".r3");
-const diar4=document.querySelectorAll(".r4");
-const diar5=document.querySelectorAll(".r5");
+// const diav1=document.querySelectorAll(".v1");
+// const diav2=document.querySelectorAll(".v2");
+// const diar1=document.querySelectorAll(".r1");
+// const diar2=document.querySelectorAll(".r2");
+// const diar3=document.querySelectorAll(".r3");
+// const diar4=document.querySelectorAll(".r4");
+// const diar5=document.querySelectorAll(".r5");
 
 function inputConsist(node){
     let value = node.value;
@@ -41,6 +41,7 @@ console.log(v1);
 
 function format(n,current,isFirst) {
     if(n==0) return "";
+    if(n==1||n==-1) return (n>0?'+ ':' - ') +"\t\t"+"I<sub>"+current+"</sub>"+"\t\t";
     if(n>0 && isFirst)return Math.abs(n) + "I<sub>"+current+"</sub>";
     return (n>0?'+ ':' - ') +"\t\t"+ Math.abs(n) + "I<sub>"+current+"</sub>"+"\t\t";
 }

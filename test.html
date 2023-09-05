@@ -1,212 +1,65 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>putting makeup on</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
-    <link rel="stylesheet" href="bootstrap.css">
     <style>
-        .diagram{
-            width: 500px;
-            position: relative;
-            border: 1px solid gray;
-            height: 450px;
-        }
-        img{
-            /* position: absolute; */
-            width: 100%;
-        }
-        .diagram *{
-            position: absolute;
-        }
-        .diagram input{
-            width: 50px;
-        }
-        .diagram .v1{
-            top: 46%;
-            left: 5%;
-        }
-        .diagram .v2{
-            top: 46%;
-            left: 35%;
-        }
-        .diagram .r1{
-            top: 20%;
-            left: 38%;
-        }
-        .diagram .r2{
-            top: 69%;
-            left: 38%;
-        }
-        .diagram .r3{
-            top: 30%;
-            left: 57%;
-        }
-        .diagram .r4{
-            top: 20%;
-            left: 79%;
-        }
-        .diagram .r5{
-            top: 60%;
-            left: 79%;
-        }
-
-        .circuit-form{
-            margin: 20 0;
-            display: grid;
-            gap: 5px;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: repeat(4,1fr);
-            width: 500px;
-        }
-        .circuit-form button{
-            grid-column: 2/3;
-            grid-row: 4/5;
-        }
-        .childOfA,.childofB{
-            width: 80px;
-        }
-        #current-equation{
-            margin: 20px 0;
-            height: 100px;
-            text-align: center;
+        .button{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            width:150px;
+            background-color:blue;
+            color:white;
+            border-radius:20px;
+            margin:10px;
+            padding:5px;
+            text-decoration-line:none;
         }
     </style>
 </head>
 
 <body>
-    <div class="m-5 p-3">
-        <div class="upper-section">
-            <div class="diagram">
-                <img src="circuitDiagram.png" alt="Circuit Diagram">              
-                <input oninput="inputConsist(this)" class="v1" type="number" placeholder="V1">
-                <input oninput="inputConsist(this)" class="v2" type="number" placeholder="V2">
-                <input oninput="inputConsist(this)"  class="r1" type="number" placeholder="R1">
-                <input oninput="inputConsist(this)"  class="r2" type="number" placeholder="R2">
-                <input  oninput="inputConsist(this)" class="r3" type="number" placeholder="R3">
-                <input  oninput="inputConsist(this)" class="r4" type="number" placeholder="R4">
-                <input  oninput="inputConsist(this)" class="r5" type="number" placeholder="R5">
-            </div>
-            <form class="circuit-form form-inline">
-                <div class="input-group mb-2 mr-sm-2">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">V1</div>
-                  </div>
-                  <input type="number"  oninput="inputConsist(this)" class="v1 form-control" id="v1" placeholder="V">
-                </div>
-                <div class="input-group mb-2 mr-sm-2">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">V2</div>
-                    </div>
-                    <input type="number" oninput="inputConsist(this)"  class="v2 form-control" id="v2" placeholder="V">
-                  </div>
-                  <div class="input-group mb-2 mr-sm-2">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">R1</div>
-                    </div>
-                    <input type="number" oninput="inputConsist(this)"  class="r1 form-control" id="r1" placeholder="&#937;">
-                  </div>
-                  <div class="input-group mb-2 mr-sm-2">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">R2</div>
-                    </div>
-                    <input type="number" oninput="inputConsist(this)"  class="r2 form-control" id="r2" placeholder="&#937;">
-                  </div>
-                  <div class="input-group mb-2 mr-sm-2">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">R3</div>
-                    </div>
-                    <input type="number" oninput="inputConsist(this)"  class="r3 form-control" id="r3" placeholder="&#937;">
-                  </div>
-                  <div class="input-group mb-2 mr-sm-2">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">R4</div>
-                    </div>
-                    <input type="number" oninput="inputConsist(this)"  class="r4 form-control" id="r4" placeholder="&#937;">
-                  </div>
-                  <div class="input-group mb-2 mr-sm-2">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">R5</div>
-                    </div>
-                    <input type="number" oninput="inputConsist(this)"  class="r5 form-control" id="r5" placeholder="&#937;">
-                  </div>
-                <button type="button" onclick="generateEquation()" class="btn btn-primary mb-2">Generate Equation</button>
-            </form>
+    <div class="container">
+        <div class="matrixA-container">
+            <div><input type="number" class="childOfA" data-pos="11"></div>
+            <div><input type="number" class="childOfA" data-pos="12"></div>
+            <div><input type="number" class="childOfA" data-pos="13"></div>
+            <div><input type="number" class="childOfA" data-pos="21"></div>
+            <div><input type="number" class="childOfA" data-pos="22"></div>
+            <div><input type="number" class="childOfA" data-pos="23"></div>
+            <div><input type="number" class="childOfA" data-pos="31"></div>
+            <div><input type="number" class="childOfA" data-pos="32"></div>
+            <div><input type="number" class="childOfA" data-pos="33"></div>
         </div>
-
-        <div class="form-control" id="current-equation">
-
+        <div class="matrixX-container">
+            <div><input type="text" value="x" disabled></div>
+            <div><input type="text" value="y" disabled></div>
+            <div><input type="text" value="z" disabled></div>
         </div>
-
-        <div style="display: block;"></div>
-        <div class="container">
-            <div class="table-responsive">
-                <table class="table table-borderless align-middle text-center">
-                    <thead></thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="number" class="childOfA pos-11A" data-pos='11'></td>
-                            <td><input type="number" class="childOfA pos-12A" data-pos='12'></td>
-                            <td><input type="number" class="childOfA pos-13A" data-pos='13'></td>
-                            <td class="border-start border-end border-primary">
-                            <!-- <input class="form-control-plaintext text-center" type="text" readonly placeholder="X"> -->
-                            <label for="" class="form-label">I<sub>1</sub></label>
-                        </td>
-                            <td></td>
-                            <td><input type="number" class="childOfB pos-11B" data-pos='11'></td>
-                        </tr>
-                        <tr>
-                            <td><input type="number" class="childOfA pos-21A" data-pos='21'></td>
-                            <td><input type="number" class="childOfA pos-22A" data-pos='22'></td>
-                            <td><input type="number" class="childOfA pos-23A" data-pos='23'></td>
-                            <td class="border-start border-end border-primary">
-                                <label for="" class="form-label">I<sub>2</sub></label>
-                            </td>
-                            <td>
-                                <label for="" class="form-label">=</label>
-                            </td>
-                            <td><input type="number" class="childOfB pos-21B" data-pos='21'></td>
-                        </tr>
-                        <tr>
-                            <td><input type="number" class="childOfA pos-31A" data-pos='31'></td>
-                            <td><input type="number" class="childOfA pos-32A" data-pos='32'></td>
-                            <td><input type="number" class="childOfA pos-33A" data-pos='33'></td>
-                            <td class="border-start border-end border-primary">
-                                <label for="" class="form-label">I<sub>3</sub></label>
-                            </td>
-                            <td></td>
-                            <td><input type="number" class="childOfB pos-31B" data-pos='31'></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="mt-5">
-                <button onclick="run()" type='button' class="btn btn-primary">Solve</button>
-            </div>
-            <div class="w-50">
-                <div class="mt-5 w-25">
-                    <table class="table table-borderless">
-                        <tr>
-                            <td>I<sub>1</sub></td>
-                            <td>=</td>
-                            <td><span id="valuex"></span></td>
-                        </tr>
-                        <tr>
-                            <td>I<sub>2</sub>
-                            </td>
-                            <td>=</td>
-                            <td><span id="valuey"></span></td>
-                        </tr>
-                        <tr>
-                            <td>I<sub>3</sub></td>
-                            <td>=</td>
-                            <td><span id="valuez"></span></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+        <div class="equal">=</div>
+        <div class="matrixB-container">
+            <div><input type="number" class="childOfB" data-pos="11"></div>
+            <div><input type="number" class="childOfB" data-pos="21"></div>
+            <div><input type="number" class="childOfB" data-pos="31"></div>
         </div>
     </div>
 
+    <button onclick="run()" class="solve">Solve</button>
+    <br>
+    <div class="ans-box">
+        x=<span id="valuex"></span><br>
+        y=<span id="valuey"></span><br>
+        z=<span id="valuez"></span>
+    </div>
+
+    <div>
+        <a href="test.html" class="button">Go to v2</a>
+    </div>
 </body>
 
 </html>
