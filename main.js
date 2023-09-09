@@ -21,11 +21,11 @@ const r5=document.getElementById("r5");
 // const diar5=document.querySelectorAll(".r5");
 
 function inputConsist(node){
-    let value = node.value;
-    let pair = document.querySelectorAll("."+node.classList[0]);
-    pair[0].value=value;
-    pair[1].value=value;
-    console.log(pair[0]);
+    // let value = node.value;
+    // let pair = document.querySelectorAll("."+node.classList[0]);
+    // pair[0].value=value;
+    // pair[1].value=value;
+    // console.log(pair[0]);
 }
 
 const eqDisplayBox=document.getElementById("current-equation");
